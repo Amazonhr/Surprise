@@ -267,7 +267,17 @@
         }
         
         function callNo() {
-            document.body.innerHTML = '<div style="min-height:100vh;display:flex;align-items:center;justify-content:center;flex-direction:column;background:#0a0a1a;padding:30px;text-align:center;"><p style="font-size:60px;">🙈</p><p style="color:#fff;font-size:20px;margin-top:20px;">Okay okay... jab mann kare tab btana! 💛</p><p style="color:#888;font-size:14px;margin-top:15px;">Page close kar sakte ho ✌️</p></div>';
+            document.querySelector('[onclick="callNo()"]').style.display = 'none';
+            const msg = document.createElement('div');
+            msg.style.marginTop = '25px';
+            msg.style.opacity = '0';
+            msg.style.transition = 'opacity 0.8s';
+            msg.innerHTML = '<p style="font-size:50px;">😂</p><p style="color:#fff;font-size:18px;margin-top:15px;">Sorry... tumne galti se<br>galat option choose kiya hai! 🙊</p>';
+            document.getElementById('page7').appendChild(msg);
+            setTimeout(() => { msg.style.opacity = '1'; }, 100);
+            setTimeout(() => {
+                window.location.href = 'https://wa.me/919053148079?text=Haan%20baat%20kar%20😊';
+            }, 2500);
         }
     </script>
 </body>
